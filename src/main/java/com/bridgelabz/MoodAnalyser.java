@@ -3,13 +3,17 @@ package com.bridgelabz;
 public class MoodAnalyser {
     String message;
 
-    public static void main(String[] args) {
-        MoodAnalyser moodanalyser = new MoodAnalyser();
-        moodanalyser.analyseMood("Happy");
+    public MoodAnalyser(String message) {
+        this.message = message;
     }
 
-    public String analyseMood(String message){
+    public static void main(String[] args) {
+        MoodAnalyser moodanalyser = new MoodAnalyser("Happy");
+    }
+
+    public String analyseMood() {
         this.message = message;
         return message;
     }
+
 }

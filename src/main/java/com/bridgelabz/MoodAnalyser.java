@@ -11,6 +11,5 @@ public class MoodAnalyser {
     public String analyseMood(String message){
         this.message = message;
         return message;
-
     }
 }

@@ -8,12 +8,19 @@ public class MoodAnalyser {
     }
 
     public static void main(String[] args) {
-        MoodAnalyser moodanalyser = new MoodAnalyser("Happy");
+        MoodAnalyser moodanalyser = new MoodAnalyser(null);
+        moodanalyser.analyseMood();
     }
 
     public String analyseMood() {
-        this.message = message;
-        return message;
-    }
+        try {
+            if (message.contains("sad"))
+                return "sad";
+            else
+                return "Happy";
+        } catch (NullPointerException e) {
+            return "Happy";
+        }
 
+    }
 }

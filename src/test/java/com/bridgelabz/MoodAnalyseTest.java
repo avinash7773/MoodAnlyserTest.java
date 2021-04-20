@@ -4,9 +4,10 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class MoodAnalyseTest {
+
     @Test
-    void testAnalyseMood() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("Happy");
+    void testGivenNullMood() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String mood = moodAnalyser.analyseMood();
         Assert.assertEquals("Happy",mood);
 

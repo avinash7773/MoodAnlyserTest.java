@@ -19,12 +19,14 @@ public class MoodAnalyser {
     //Handle nullpointerException
     public String analyseMood() throws MoodAnalysisException {
         try {
+            if(message.length() == 0)
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.EnteredEmpty,"Please enter valid mood");
             if (message.contains("sad"))
                 return "sad";
             else
                 return "Happy";
         } catch (NullPointerException e) {
-            throw new MoodAnalysisException("Please enter valid mood");
+            throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.EnteredNull,"Please enter valid mood");
         }
 
     }

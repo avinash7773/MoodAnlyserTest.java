@@ -1,8 +1,15 @@
 package com.bridgelabz;
 
 public class MoodAnalysisException extends Exception {
-    public MoodAnalysisException(String message) {
+
+    enum ExceptionType {
+        EnteredNull,EnteredEmpty;
+    }
+    ExceptionType type;
+    public MoodAnalysisException(ExceptionType type, String message) {
         super(message);
+        this.type=type;
+
     }
 
 

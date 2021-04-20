@@ -9,14 +9,15 @@ public class MoodAnalyseTest {
     @Test
     void testGivenNullMood() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-        String mood = null;
+    //    String mood = null;
         try {
-            ExpectedException exceptionRule = ExpectedException.none();
-            exceptionRule.expect(MoodAnalysisException.class);
-            mood = moodAnalyser.analyseMood();
-            Assert.assertEquals("Happy",mood);
+    //        ExpectedException exceptionRule = ExpectedException.none();
+      //      exceptionRule.expect(MoodAnalysisException.class);
+            moodAnalyser.analyseMood();
+       //   Assert.assertEquals("Happy",mood);
         } catch (MoodAnalysisException e) {
-            e.printStackTrace();
+               Assert.assertEquals(MoodAnalysisException.ExceptionType.EnteredNull,e.type);
+
         }
 
     }
